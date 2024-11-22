@@ -11,8 +11,18 @@ Q1. Please follow the principle (‘firstName’ + ‘lastName’ + ‘customerI
 array and print it out.
 **/
 
-function sortUserName(user) {
-    
+const users = [
+  { firstName: "John", lastName: "Doe", customerID: "123" },
+  { firstName: "Alice", lastName: "Smith", customerID: "456" },
+  { firstName: "Bob", lastName: "", customerID: "789" },
+];
+
+function sortUserName(users) {
+  return users.sort((a, b) => {
+    const keyA = a.firstName + (a.lastName || "") + a.customerID;
+    const keyB = b.firstName + (b.lastName || "") + b.customerID;
+    return keyA.localeCompare(keyB);
+  });
 }
 
 /**
@@ -20,6 +30,4 @@ Q2. Please sort by ‘profession’ to follow the principle.
 (‘systemAnalytics’ > ‘engineer’ > ‘productOwner’ > ‘freelancer’ > ‘student’’)
 **/
 
-function sortByType(user) {
-
-}
+function sortByType(user) {}
