@@ -4,7 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Q2-1-2-answer</title>
-    <link rel="stylesheet" href="./style.css">
+    <style>
+      .container {
+        font-size: 14px;
+      }
+
+      .container .header {
+        font-size: 18px;
+      }
+
+      .container .shop-list {
+        list-style: none;
+        margin-left: -15px;
+      }
+
+      .container .shop-list li.item {
+        color: green;
+      }
+
+      .container .shop-list .item {
+        color: blue;
+      }
+      /* Q1. Explain why does this color not works, and how to fix make it work on 1st list */
+      /* A1. .container .shop-list li.item 的權重大於 .container .shop-list .item，於是 .container .shop-list li.item 中的 color: green ; 會顯示，.container .shop-list .item 中的 color: blue; 不會 */
+
+      /* Q2. Write styling make every other line give background color to next one */
+
+      /* 讓每隔一行有不同的背景顏色 */
+      .container .shop-list li.item:nth-child(even) {
+        background-color: #f0f0f0; /* 淺灰色背景 */
+      }
+
+      /* 同時設定奇數行的背景色 */
+      .container .shop-list li.item:nth-child(odd) {
+        background-color: white;
+      }
+    </style>
   </head>
   <body>
     <div class="container">
