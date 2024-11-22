@@ -12,9 +12,76 @@ array and print it out.
 **/
 
 const users = [
-  { firstName: "John", lastName: "Doe", customerID: "123" },
-  { firstName: "Alice", lastName: "Smith", customerID: "456" },
-  { firstName: "Bob", lastName: "", customerID: "789" },
+  {
+    firstName: "John",
+    lastName: "Doe",
+    customerID: "123",
+    profession: "engineer",
+    note: "Senior developer",
+  },
+  {
+    firstName: "Alice",
+    lastName: "Smith",
+    customerID: "456",
+    profession: "systemAnalytics",
+    note: "Lead analyst",
+  },
+  {
+    firstName: "Bob",
+    lastName: "",
+    customerID: "789",
+    profession: "student",
+    note: "",
+  },
+  {
+    firstName: "Emma",
+    lastName: "Wilson",
+    customerID: "321",
+    profession: "productOwner",
+    note: "Product team",
+  },
+  {
+    firstName: "David",
+    lastName: "Chen",
+    customerID: "654",
+    profession: "freelancer",
+    note: "Contract work",
+  },
+  {
+    firstName: "Sarah",
+    lastName: "Johnson",
+    customerID: "987",
+    profession: "",
+    note: "New hire",
+  }, // 空的profession
+  {
+    firstName: "Michael",
+    lastName: "Brown",
+    customerID: "147",
+    profession: "engineer",
+    note: "Backend specialist",
+  },
+  {
+    firstName: "Lisa",
+    lastName: "",
+    customerID: "258",
+    profession: null,
+    note: "Pending",
+  }, // null profession
+  {
+    firstName: "Tom",
+    lastName: "Miller",
+    customerID: "369",
+    profession: "systemAnalytics",
+    note: "Data team",
+  },
+  {
+    firstName: "Jane",
+    lastName: "Taylor",
+    customerID: "741",
+    profession: "student",
+    note: "Intern",
+  },
 ];
 
 function sortUserName(users) {
@@ -30,4 +97,16 @@ Q2. Please sort by ‘profession’ to follow the principle.
 (‘systemAnalytics’ > ‘engineer’ > ‘productOwner’ > ‘freelancer’ > ‘student’’)
 **/
 
-function sortByType(user) {}
+const professionWeight = {
+  systemAnalytics: 5,
+  engineer: 4,
+  productOwner: 3,
+  freelancer: 2,
+  student: 1,
+};
+
+function sortByType(users) {
+  return users.sort((a, b) => {
+    return professionWeight[b.profession] - professionWeight[a.profession];
+  });
+}
