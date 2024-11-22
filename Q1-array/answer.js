@@ -103,10 +103,13 @@ const professionWeight = {
   productOwner: 3,
   freelancer: 2,
   student: 1,
+  '': 0  // 空值給予最低權重
 };
 
 function sortByType(users) {
   return users.sort((a, b) => {
-    return professionWeight[b.profession] - professionWeight[a.profession];
+    const weightA = professionWeight[a.profession || '']; // 使用 || 運算符處理undefined或null
+    const weightB = professionWeight[b.profession || ''];
+    return weightB - weightA;
   });
 }
