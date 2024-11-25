@@ -108,6 +108,35 @@ will be using it? -->
       6. Can you explain CSS priority, and what principle are your used to
       writing CSS stylesheet.說明CSS權重
     </h3>
-    
+    <ul>
+      <li>
+        CSS權重(優先級)由高至低的層級順序如下:
+        <ul>
+          <li>!important 宣告 (!important)</li>
+          <li>行內樣式 (Inline styles)</li>
+          <li>ID選擇器 (#)</li>
+          <li>類別選擇器 (.)、屬性選擇器、偽類選擇器</li>
+          <li>元素選擇器和偽元素選擇器</li>
+          <li>通用選擇器 (*) 和組合選擇器</li>
+        </ul>
+      </li>
+      <li>
+        可維護性原則:
+        <ul>
+          <li>避免使用行內樣式</li>
+          <li>盡量少用!important</li>
+          <li>保持選擇器簡單</li>
+          <li>使用CSS變數存放重複使用的值</li>
+        </ul>
+      </li>
+      <li>
+        效能原則:
+        <ul>
+          <li>避免過度巢狀選擇器</li>
+          <li>使用明確的選擇器</li>
+          <li>減少重複的規則</li>
+        </ul>
+      </li>
+    </ul>
   </body>
 </html>
