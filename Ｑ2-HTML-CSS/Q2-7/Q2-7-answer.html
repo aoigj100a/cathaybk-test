@@ -1,11 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Q2-7-answer</title>
-</head>
-<body>
+    <style>
+      /* Basic styling to visualize the layout */
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+      header,
+      nav,
+      main,
+      footer {
+        padding: 1rem;
+      }
+      .product-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+    </style>
+  </head>
+  <body>
     <!-- 7.Can you introducing some of Semantic HTML elements that you already know and how you used it ever, please make some example. -->
-</body>
+    <header>
+      <!-- Logo 容器 -->
+      <figure class="logo">
+        <img src="logo.png" alt="Company Logo" />
+      </figure>
+
+      <!-- 主要導航列 -->
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- 主要內容區域 -->
+    <main>
+      <article class="product-container">
+        <!-- 產品圖片區塊 -->
+        <section class="product-gallery">
+          <figure class="product-slide">
+            <img src="product1.jpg" alt="產品圖片" />
+            <figcaption>主要產品視圖</figcaption>
+          </figure>
+        </section>
+        <section class="product-info">
+          <header>
+            <h1>產品名稱</h1>
+            <p class="product-price">NT$3,000</p>
+          </header>
+
+          <!-- 產品描述清單 -->
+          <aside class="product-details">
+            <h2>產品特色</h2>
+            <ul>
+              <li>特色一</li>
+              <li>特色二</li>
+              <li>特色三</li>
+            </ul>
+          </aside>
+        </section>
+      </article>
+    </main>
+    <!-- 頁尾區域 -->
+    <footer>
+      <nav class="footer-nav">
+        <ul>
+          <li><a href="#contact">聯絡我們</a></li>
+          <li><a href="#terms">使用條款</a></li>
+          <li><a href="#privacy">隱私政策</a></li>
+        </ul>
+      </nav>
+      <address>
+        聯絡信箱：<a href="mailto:info@example.com">info@example.com</a>
+      </address>
+    </footer>
+  </body>
 </html>
