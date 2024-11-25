@@ -8,9 +8,106 @@
   <body>
     <!-- 4. What is different between <section> and <article>, can you make an example how you
 will be using it? -->
+    <h3>
+      4. What is different between &lt;section&gt; and &lt;article&gt;, can you
+      make an example how you will be using it?
+    </h3>
 
+    <h4>主要差異：</h4>
+    <ul>
+      <li>
+        &lt;section&gt;：
+        <ul>
+          <li>用於將相關內容分組的區塊</li>
+          <li>通常包含一個標題（heading）</li>
+          <li>內容通常具有共同的主題或功能</li>
+        </ul>
+      </li>
+      <li>
+        &lt;article&gt;：
+        <ul>
+          <li>代表一個獨立、完整的內容單元</li>
+          <li>內容可以單獨分發或重用</li>
+          <li>如：部落格文章、新聞報導、評論</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h4>使用範例：</h4>
+
+    <!-- 部落格頁面結構示例 -->
+    <section class="blog-section">
+      <h1>最新文章</h1>
+
+      <article class="post">
+        <h2>JavaScript ES6 新特性介紹</h2>
+        <p class="meta">發布日期：2024-03-15</p>
+        <div class="content">
+          <p>文章內容...</p>
+        </div>
+        <section class="comments">
+          <h3>評論區</h3>
+          <!-- 評論內容 -->
+        </section>
+      </article>
+
+      <article class="post">
+        <h2>CSS Grid 佈局指南</h2>
+        <p class="meta">發布日期：2024-03-14</p>
+        <div class="content">
+          <p>文章內容...</p>
+        </div>
+        <section class="comments">
+          <h3>評論區</h3>
+          <!-- 評論內容 -->
+        </section>
+      </article>
+    </section>
+    <hr />
     <!-- 5.Please explain about what is CSS boxing model and the layout components that it consists of. -->
 
+    <h3>
+      5. Please explain about what is CSS boxing model and the layout components
+      that it consists of.說明盒子模型
+    </h3>
+    <p>CSS Box Model描述一個網頁元素如何被渲染在網頁上。</p>
+
+    <h4>盒子模型的組件：</h4>
+    <ul>
+      <li>Content（內容區）：實際的內容區域</li>
+      <li>Padding（內距）：內容與邊框之間的空間</li>
+      <li>Border（邊框）：包圍元素的邊框</li>
+      <li>Margin（外距）：元素與其他元素之間的空間</li>
+    </ul>
+
+    <h4>box-sizing 屬性：</h4>
+    <ul>
+      <li>
+        content-box（預設值）：
+        <ul>
+          <li>width/height 只包含內容區域的尺寸</li>
+          <li>padding 和 border 會額外加到元素總尺寸上</li>
+        </ul>
+      </li>
+      <li>
+        border-box：
+        <ul>
+          <li>width/height 包含內容區域、padding 和 border</li>
+          <li>設定的尺寸就是元素最終的尺寸</li>
+          <li>
+            因為較為直觀，常見的 CSS reset 會設定：
+            <pre><code>* { box-sizing: border-box; }</code></pre>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <hr />
     <!-- 6. Can you explain CSS priority, and what principle are your used to writing CSS stylesheet. -->
+
+    <h3>
+      6. Can you explain CSS priority, and what principle are your used to
+      writing CSS stylesheet.說明CSS權重
+    </h3>
+    
   </body>
 </html>
